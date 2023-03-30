@@ -1,0 +1,99 @@
+body{
+    height: 110vh;
+    background: url(./backimg_1.png) no-repeat;
+    background-size: cover;
+}
+
+.btn_info{
+    width: 9%;
+    height: 3%;
+
+    position: absolute;
+    top: 34.9%;
+    left: 10%;
+}
+
+.btn_project{
+    width: 9%;
+    height: 3%;
+
+    position: absolute;
+    top: 39.5%;
+    left: 10%;
+}
+
+.btn_info_2{
+    width: 11.7%;
+    height: 7%;
+    position: absolute;
+    top: 5.5%;
+    left: 20.7%;
+}
+
+.btn_project_2{
+    width: 13%;
+    height: 7%;
+    position: absolute;
+    top: 5.5%;
+    left: 32.5%;
+}
+
+.btn_info_2:hover, .btn_project_2:hover{
+    background-color: #808080;
+    opacity: 0.5;
+    border-radius: 3px;
+}
+
+
+.btn_info:hover, .btn_project:hover{
+    background-color: #808080;
+    opacity: 0.5;
+    border-radius: 3px;
+    padding: 2px 0;
+}
+
+
+.profile_img{
+    width: 25%;
+    height: 48%;
+    position: absolute;
+    left: 26%;
+    top: 17.5%;
+}
+
+
+
+
+.introduce{
+    position: absolute;
+    top: 66.5%;
+    left: 26%;
+    display: flex;
+    flex-direction: column;
+    line-height: 167.8%;
+}
+
+.name{
+    display: inline-block;
+    font-size: 120%;
+}
+
+.blue_text{
+    color:#3F9CD6;
+}
+
+.gray_text{
+    color: #808080;
+}
+ 
+.sky_text{
+    color:#8CDCFE;
+}
+
+.white_text{
+    color: #D4D4D4;
+}
+ 
+.orange_text{
+    color: #CE723B;
+}

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'count.css' %}"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="info_div"><h1 class = "info">글자 수가 궁금한 글을 입력해보세요!</h1></div>
+    <form action="{%url 'result' %}" method="post">{% csrf_token %}
+        
+        <textarea name="text" cols="100" rows="10" class="textarea"></textarea>
+        <br/>
+        <input type=""submit value="제출" class="submit_btn"/>
+    </form>
+</body>
+</html>

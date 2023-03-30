@@ -1,0 +1,62 @@
+body{
+    margin: 5% 25%;
+    position: relative;
+    background-image: url('./img_1.png');
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.info_div{
+    display: flex;
+    align-items: center;
+    width: auto;
+    height: 70px;
+    background-color: aliceblue;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    padding: 0 15px;
+}
+
+.info{
+    width: auto;
+    font-weight: 600;
+    font-size: 200%;
+    text-align: center;
+
+}
+
+.textarea{
+    width: auto;
+    height: 250px;
+    border-radius: 10px;
+    border: 2px solid black;
+    font-weight: 600;
+    margin: auto;
+    padding: 10px;
+} 
+
+
+.textarea:hover{
+    background-color: gainsboro;
+}
+
+.submit_btn{    
+    width: 30px;
+    background-color: aliceblue;
+    color: black;
+    text-align: center;
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 5px 30px;
+    font-weight: 700;
+    margin-top: 10px;
+    display: inline-block;
+    float: right;
+}
+
+.submit_btn:hover{
+    background-color: gainsboro;
+}

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'result.css' %}"/>
+    <!-- <meta charset="UTF-8"> -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p class = "text"><strong>입력한 텍스트</strong><br><br>{{text}}</p>
+    <div class = "result_achieve">
+        <p class = "result total_len"><strong>글자수</strong><br><br>{{total_len}}</p>
+        <p class = "result no_blank_len"><strong>공백 제외 글자수</strong><br><br>{{no_blank_len}}</p>
+        <p class = "result word_count"><strong>단어수</strong><br><br>{{word_count}}</p>
+    </div>
+</body>
+</html>
