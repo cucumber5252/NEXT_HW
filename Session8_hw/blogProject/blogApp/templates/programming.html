@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   {% load static %}
+   <link rel="stylesheet" type="text/css" href="{% static 'programming.css' %}">
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+<body>
+   <h2>프로그래밍 카테고리 목록</h2>
+   <div class="articles">
+      <ul>
+         <div class="articles_div">
+         {% for article in articles %} 
+         <li><div class="article_div"><a href="{% url 'detail' article.id %}" class="article_link">{{ article.title }}</a></div></li>
+         {% endfor %}
+         </div>
+      </ul>
+   </div>
+</body>
+</html>

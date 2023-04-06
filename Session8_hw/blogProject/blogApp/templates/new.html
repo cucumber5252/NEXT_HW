@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   {% load static %}
+   <link rel="stylesheet" type="text/css" href="{% static 'new.css' %}"/>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>New Article</title>
+</head>
+<body>
+   <h2 class="color">글쓰기 페이지</h2>
+   <form action="" method="post">
+      {% csrf_token %}
+      <div class="title">
+         <div class="title_div width color">제목</div>
+         <input type="text" name="title" class="title_input"/>
+      </div>
+      <br>
+      <div>
+         <div class="content_div width color">내용</div>
+         <textarea name="content" cols="30" rows="10" class="content_input"></textarea>
+      </div>
+      <br>
+      <div>
+         <div class="category_div width color">카테고리</div>
+         <div class="category_radio">
+            <div class="one_radio"><input type="radio" name="category" value="hobby" class="radio_each"/><span class="span_each color">취미</span></div>
+            <div class="one_radio"><input type="radio" name="category" value="food" class="radio_each"/><span class="span_each color">음식</span></div>
+            <div class="one_radio"><input type="radio" name="category" value="programming" class="radio_each"/><span class="span_each color">프로그래밍</span></div>
+         </div>
+      </div>
+      <div class="button_div">
+         <button type="submit" class="button">작성 완료</button>
+      </div>
+      
+   </form>
+</body>
+</html>

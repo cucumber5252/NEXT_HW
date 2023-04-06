@@ -1,0 +1,37 @@
+body{
+    margin: 3% 35%;
+    background-image: url('./back_img.jpg');
+    background-size: cover;
+    color: lightgray;
+}
+
+.title, .content, .date{
+    background-color: rgb(240, 240, 255);
+    border-radius: 5px;
+    height: auto;
+    padding: 5px 8px;
+    color: #210751;
+    font-weight: 501;
+}
+
+
+
+.button_div{
+    position: relative;
+}
+
+.button{
+    font-weight: 600;
+    background-color: rgb(240, 240, 255);
+    color: #210751;
+    border: none;
+    border-radius: 5px;
+    padding: 3px 10px;
+    text-decoration: none;
+    position: absolute;
+    right: 0;
+}
+
+.button:hover{
+    text-decoration: underline;
+}

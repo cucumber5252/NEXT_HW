@@ -1,0 +1,31 @@
+body{
+    margin: 3% 35%;
+    background-image: url('./back_img.jpg');
+    background-size: cover;
+    color: lightgray;
+}
+
+.articles{
+    background-color: rgb(240, 240, 255);
+    border-radius: 5px;
+    height: auto;
+    margin-bottom: 10%;
+    color: #210751;
+}
+
+.articles_div{
+    padding: 5px 0;
+}
+
+.article_div{
+    padding: 3px 0;
+}
+
+.article_link{
+    text-decoration: none;
+    color:#210751;
+}
+
+.article_link:hover{
+    text-decoration: underline;
+}
