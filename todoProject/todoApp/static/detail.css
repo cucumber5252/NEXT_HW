@@ -1,0 +1,26 @@
+body{
+    margin: 5% 35%;
+    background-image: url('./backimg.jpg');
+    background-size: cover;
+    color: darkslategray;
+    position: relative;
+    font-weight: 700;
+}
+
+.buttons{
+    position: absolute;
+    right: 0;
+    width: 60%;
+}
+
+.button{
+    color: black;
+    margin-left: 5%;
+}
+
+p{
+    padding: 1% 3%;
+    border: 2px dotted darkslategray;
+    border-radius: 5px;
+    background-color: rgb(240, 239, 239);
+}

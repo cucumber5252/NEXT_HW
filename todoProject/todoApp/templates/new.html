@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'new.css' %}" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <br>
+    <br>
+    <form action="" method="post">
+        {% csrf_token %}
+        <div class="title_div">
+            <div class="title_label"><label for="title"><span class="title">제목</span></label></div>
+            <input type="text" name="title" class="title_input">
+        </div>
+        <br>
+        <br>
+        <div class="content_div">
+            <div class="content_label"><label for="content" class="content_label"><span class="title">내용</span></label></div>
+            <textarea name="content" class="content_input" cols="30" rows="10"></textarea>
+        </div>
+        <br>
+        <br>
+        <div class="deadline_div">
+            <label for="deadline"><span class="title">마감기한</span></label>
+            <input value="{{post.deadline|date:'Y-m-d'}}" type="text" onfocus="(this.type='date')" name="deadline" class="deadline_input">
+        </div>
+        <br>
+        <br>
+        <div class="done_div">
+            <label for="done"><span class="title">상태</span></label>
+            <span class="done_input">
+                <span class="done_input_each"><input type="radio" name="done" value=True> 완료</span>
+                <span class="done_input_each"><input type="radio" name="done" value=False> 미완료</span>
+            </span>
+        </div>
+        <br>
+        <div class="button_div">
+            <button type="submit" class="button">작성하기</button>
+        </div>
+    </form>
+    
+</body>
+</html>

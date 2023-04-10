@@ -1,0 +1,84 @@
+body{
+    margin: 3% 35%;
+    background-image: url('./backimg.jpg');
+    background-size: cover;
+    color: darkslategray;
+    font-weight: 700;
+    position: relative;
+}
+
+h1{
+    padding-top: 10%;
+    margin-bottom: 10%;
+    text-align: center;
+}
+
+
+.ul_div{
+    margin-left: 17%;
+}
+
+.ul_title{
+    margin-left: -5%;
+}
+
+
+.post_link{
+    color: darkslategray;
+    white-space: nowrap;
+    text-decoration: line-through;
+}
+
+
+.post_li{
+    margin-bottom: 5%;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.post_li_complete{
+    text-decoration: line-through 2px;
+    margin-right: 5%;
+}
+
+.post_li_uncomplete{
+    text-decoration: none;
+    margin-right: 5%;
+}
+
+.li_div{
+    position: relative;
+    
+}
+
+.square{
+    margin-right: 5%;
+}
+
+
+.complete_button{
+    position: absolute;
+    right: 0;
+    background-color: rgb(65, 65, 255);
+    padding: 1% 4%;
+    border-radius: 5px;
+}
+
+.uncomplete_button{
+    position: absolute;
+    right: 0;
+    background-color: rgb(255, 66, 66);
+    padding: 1% 4%;
+    border-radius: 5px;
+}
+
+.new_button{
+    position: absolute;
+    right : 0;
+    padding: 1% 2.5%;
+    border-radius: 5px;
+    text-decoration: underline;
+    color: black;
+}
