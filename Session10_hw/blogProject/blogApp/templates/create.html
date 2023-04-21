@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block css %}
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'create.css' %}"/>
+{% endblock %}
+
+{% block body %}
+<div class="create">
+   <form action="" method="post">
+      {% csrf_token %}
+      <div class="cre_title">
+         <div class="cre_title_text"><strong>제목</strong></div>
+         <input type="text" name="title" class="cre_title_input" placeholder="제목을 입력하세요"/>
+      </div>
+      <br>
+      <div>
+         <div class="cre_content_text"><strong>내용</strong></div>
+         <textarea name="content" cols="30" rows="10" class="cre_content_input" placeholder="내용을 입력하세요"></textarea>
+      </div>
+      <br>
+      <div>
+         <div class="cre_category_text"><strong>카테고리</strong></div>
+         <div class="category_radio">
+            <div class="one_radio"><input type="radio" name="category" value="hobby" class="radio_each"/><span class="span_each_radio">취미</span></div>
+            <div class="one_radio"><input type="radio" name="category" value="food" class="radio_each"/><span class="span_each_radio">음식</span></div>
+            <div class="one_radio"><input type="radio" name="category" value="programming" class="radio_each"/><span class="span_each_radio">프로그래밍</span></div>
+         </div>
+      </div>
+      <div class="cre_button_div">
+         <button type="submit" class="cre_button"><span class="cre_button_span">POST</span>
+         <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="post_icon" viewBox="0 0 16 16">
+            <path d="M15.854.146a.5.5 0 0 1 .11.54l-5.819 14.547a.75.75 0 0 1-1.329.124l-3.178-4.995L.643 7.184a.75.75 0 0 1 .124-1.33L15.314.037a.5.5 0 0 1 .54.11ZM6.636 10.07l2.761 4.338L14.13 2.576 6.636 10.07Zm6.787-8.201L1.591 6.602l4.339 2.76 7.494-7.493Z"/>
+         </svg>
+      </button>
+      </div>
+   </form>
+</div>
+
+{% endblock %}

@@ -1,0 +1,46 @@
+{% extends 'detail_base.html'%}
+
+
+{% block detail %}
+<br>
+<div class="comment_list">
+    <div class="comment_each recomment_comment_each">
+        <span class="comment_each_text">{{comment.content}}</span>
+        <a href="{% url 'recomment' article.id comment.id%}" class="comment_buttons recomment_button"><strong>답글</strong></a>
+        <a href="{% url 'deleteComment' article.id comment.id%}"class="comment_buttons delete_button"><strong>삭제</strong></a>
+    </div>
+    {% for recomment in comment.recomments.all %}
+        <div class="recomment_each">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewBox="0 0 16 16" class="recomment_icon">
+                <path fill-rule="evenodd" d="M1.5 1.5A.5.5 0 0 0 1 2v4.8a2.5 2.5 0 0 0 2.5 2.5h9.793l-3.347 3.346a.5.5 0 0 0 .708.708l4.2-4.2a.5.5 0 0 0 0-.708l-4-4a.5.5 0 0 0-.708.708L13.293 8.3H3.5A1.5 1.5 0 0 1 2 6.8V2a.5.5 0 0 0-.5-.5z"/>
+            </svg>
+            <span class="recomment_each_text">{{recomment.content}}</span>
+            <a href="{% url 'deleteRecomment' article.id comment.id recomment.id %}" class="recomment_delete_button"><strong>삭제</strong></a>
+        </div>
+    {% endfor %}
+    <form method = "POST" class="recomment_form">
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewBox="0 0 16 16" class="recomment_icon">
+            <path fill-rule="evenodd" d="M1.5 1.5A.5.5 0 0 0 1 2v4.8a2.5 2.5 0 0 0 2.5 2.5h9.793l-3.347 3.346a.5.5 0 0 0 .708.708l4.2-4.2a.5.5 0 0 0 0-.708l-4-4a.5.5 0 0 0-.708.708L13.293 8.3H3.5A1.5 1.5 0 0 1 2 6.8V2a.5.5 0 0 0-.5-.5z"/>
+        </svg>
+        {% csrf_token %}
+        <input type="text" name="content" placeholder="답글을 남겨보세요" class="recomment_input"/>
+        <button type="submit" class="recomment_input_button"><strong>작성하기</strong></button>
+    </form>
+</div> 
+
+{% if other_comments.all.count != 0 %}
+<div class="comment_list">
+    {% for comment in other_comments.all %}
+    <div class="comment_each">
+       <span class="comment_each_text">{{comment.content}}</span>
+       <a href="{% url 'recomment' article.id comment.id%}" class="comment_buttons recomment_button"><strong>답글</strong></a>
+       <a href="{% url 'deleteComment' article.id comment.id %}"class="comment_buttons delete_button"><strong>삭제</strong></a>
+    </div>
+    {% endfor %}
+</div>
+{% endif %}
+
+<a href="{% url 'detail' article.id %}"class="back_button"><strong>돌아가기</strong></a>
+<br>
+<br>
+{% endblock %}

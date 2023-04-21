@@ -1,0 +1,153 @@
+body{
+    background-image: url('./back_img.jpg');
+    background-size: cover;
+}
+
+.home_link{
+    text-decoration: none;
+    color: black;
+}
+
+.body{
+    margin: 0 20%;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    height: 36.5em;
+}
+.header{
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.header_text{
+    margin-top: 0.5%;
+    margin-bottom: 0.5%;
+    margin-left: 80%;
+}
+
+.title{
+    height: auto;
+    border-bottom: 2px solid black;
+}
+
+.title_text{
+    margin-top: 3%;
+    margin-left: 30%;
+}
+
+
+.footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    border-top: 2px solid black;
+    padding: 0.5% 0;
+    
+}
+
+.info{
+    position: absolute;
+    right: 9%;
+    padding-bottom: 0.5%;
+}
+
+.info_margin{
+    margin-bottom: 0.1%;
+}
+
+.info_text{
+    margin: 0;
+}
+
+.c_circle{
+    position: relative;
+    top: 2px;
+}
+
+.profile{
+    border: gray solid 2px;
+    border-radius: 5px;
+    width: 98%;
+    height: 100%;
+    text-align: center;
+    position: relative;
+    left: -2%
+}
+
+
+.profile_img{
+    background-image: url('./profile_img.jpg');
+    background-size: cover;
+    background-position: center;
+    width: 90%;
+    height: 10em;
+    border-radius: 5px;font-size: 0.7em;
+    margin: 5% 5% 0 ;
+}
+
+
+.profile_text_name{
+    margin: 10% 0 10% 0;
+}
+
+.profile_text_gray{
+    color: lightgray;
+    margin:0 0 5% 0;
+}
+
+
+.nav_bar{
+    margin-top: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    position: absolute;
+    top: 0;
+}
+
+
+.button{
+    text-decoration: none;
+    color: black;
+}
+
+.button_hover:hover{
+    text-decoration: underline;
+}
+
+
+.base_create_button{
+    border: 1.8px solid gray;
+    border-radius: 5px;
+    padding: 3% 27.8%;
+    position: relative;
+    left: -1%;
+    font-size: 0.9em;
+}
+
+
+.button_text{
+    margin-bottom: 1%;
+}
+
+.category_button{
+    margin-bottom: 1%;
+    margin-left: 15%;
+}
+
+.in_body{
+    width: 44.3em;
+    height: 30em;
+    position: absolute;
+    left: 18%;
+    margin-top: 3%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    padding-bottom: 2%;
+}
+
+.in_body::-webkit-scrollbar {
+    display: none;
+  }
