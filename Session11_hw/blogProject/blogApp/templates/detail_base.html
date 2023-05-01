@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block css %}
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'detail.css' %}"/>
+{% endblock %}
+
+
+{% block body %}
+<div class="detail">
+   <div class="det_title"><strong>{{article.title}}</strong></div>
+   <div class="det_date">{{article.date}}</div>
+   <div class="det_content">{{article.content}}</div>
+   <div class="det_category">{{article.category}}</div>
+</div>
+
+{% if user.is_authenticated and user.pk == article.author.pk %}
+<div class="update_button_div">
+   <a href="{% url 'update' article.id %}" class="update_update_button"><strong>수정하기</strong></a>
+</div>
+<div class="update_button_div">
+   <a href="{% url 'delete' article.id %}" class="update_delete_button"><strong>삭제하기</strong></a>
+</div>
+<br>
+{% endif %}
+
+<div class="comment">
+   {% block detail %}
+
+   {% endblock %}
+</div>
+{% endblock %}

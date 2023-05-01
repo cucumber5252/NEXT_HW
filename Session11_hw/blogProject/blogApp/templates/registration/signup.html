@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% load static %}
+  <link rel="stylesheet" type="text/css" href="{% static 'signup.css' %}" />
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+
+  <form method="POST">
+  {% csrf_token %}
+  <div class="posts_box">
+    <h1 class="login_text">JOIN US</h1>
+    {% if error %}
+    <p class="error">{{error}}</p>
+    {% endif %}
+    <h2 class="registration-input-text">아이디</h2>
+    <input type="text" name="username" placeholder="아이디" class="registration-input"/>
+    <br>
+    <h2 class="registration-input-text">비밀번호</h2>
+    <input type="password" name="password" placeholder="비밀번호" class="registration-input"/>
+    
+    <div class="registration-box">
+      <button class="button">회원가입</button>
+    </div>
+  
+  </form>
+</body>
+</html>
+
+

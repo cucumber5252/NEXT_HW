@@ -1,0 +1,114 @@
+body{
+    background-image: url('./img/back_img.jpg');
+    background-size: cover;
+    margin: 5% 30%;
+}
+
+
+.posts_box{
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    border-radius: 15px;
+    box-shadow: 0 5px 5px 3px rgba(0, 0, 0, 0.2);
+    padding: 3% 15%;
+    margin-top: 5%;
+}
+
+
+.login_text{
+    width: 100%;
+    text-align: center;
+    margin: 0;
+}
+
+.error{
+    width: 100%;
+    text-align: center;
+    color: red;
+    font-weight: 700;
+}
+
+.registration-input-text{
+    margin-left: 0;
+    margin-bottom: 3%;
+    margin-top: 10%;
+}
+
+.registration-input{
+    width: 95%;
+    font-size: 1em;
+    border-radius: 5px;
+    padding: 2%;
+}
+
+
+.registration-box{
+    margin-top: 10%;
+    margin-bottom: 10%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.new_registration{
+    width: 2em;
+}
+
+.button {
+    margin-top: 5em;;
+    display: block;
+    width: 250px;
+    height: 65px;
+    margin: 0;
+    text-decoration: none;
+    color: black;
+    font-family: "Jua", sans-serif;
+    font-size: 20px;
+    background-color: whitesmoke;
+    box-shadow: 0 1px 1px 1px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    border-radius: 10px;
+    position: relative;
+    border: none;
+  }
+
+  .social_button {
+    margin-top: 5em;;
+    display: block;
+    width: 250px;
+    height: 65px;
+    margin: 0;
+    text-decoration: none;
+    color: black;
+    font-family: "Jua", sans-serif;
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    position: relative;
+    border: none;
+    background: none;
+  }
+
+  .kakao_button{
+    background-image: url("./img/kakao_btn.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .google_button{
+    background-image: url("./img/google_btn.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+
+  .deco_none{
+    text-decoration: none;
+    color: black;
+  }

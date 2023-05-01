@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block css %}
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'category.css' %}"/>
+{% endblock %}
+
+
+{% block body %}
+
+{% for article in articles %}
+<div class="cat_article_div">
+    <a href="{% url 'detail' article.id %}" class="cat_article_a">
+    <div class="cat_title"><strong>{{article.title}}</strong></div>
+    <div class="cat_date">{{article.date}}</div>
+    <div class="cat_content">{{article.content}}</div>
+    <div class="cat_category">{{article.category}}</div>
+    </a>
+</div>
+<br>
+{% endfor %}
+
+{% endblock %}

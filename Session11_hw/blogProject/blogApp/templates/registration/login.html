@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% load static %}
+  <link rel="stylesheet" type="text/css" href="{% static 'signup.css' %}" />
+  {% load account socialaccount %}
+  {% providers_media_js %}
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+
+  <form method="POST">
+  {% csrf_token %}
+  <div class="posts_box">
+    <h1 class="login_text">LOGIN</h1>
+    {% if error %}
+    <p class="error">{{error}}</p>
+    {% endif %}
+    <h2 class="registration-input-text">아이디</h2>
+    <input type="text" name="username" placeholder="아이디" class="registration-input"/>
+    <h2 class="registration-input-text">비밀번호</h2>
+    <input type="password" name="password" placeholder="비밀번호" class="registration-input"/>
+  </form>
+
+    <div class="registration-box">
+      <button class="button">로그인</button>
+      <br>
+      <h3>아직도 회원이 아니십니까?</h3>
+      <button class="button"><a href="{% url 'signup' %}" class='deco_none'>회원가입</a></button>
+      <br>
+      <form method = "POST" action="{% provider_login_url 'kakao' %}">
+        {% csrf_token %} {{ form.as_p }} {% if redirect_field_value %}
+          <input type ="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}"/>
+          {% endif %}
+          <button type="submit" class="primaryAction social_button kakao_button"></button>
+      </form>
+      <br>
+      <form method = "POST" action="{% provider_login_url 'google' %}">
+        {% csrf_token %} {{ form.as_p }} {% if redirect_field_value %}
+          <input type ="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}"/>
+          {% endif %}
+          <button type="submit" class = "primaryAction social_button google_button"></button>
+      </form>
+    </div>
+  </div>
+  
+  
+</body>
+</html>

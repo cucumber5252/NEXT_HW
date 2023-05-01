@@ -1,0 +1,29 @@
+{% extends 'detail_base.html'%}
+
+
+{% block detail %}
+<br>
+<br>
+<form method = "POST" class="comment_form">
+   {% csrf_token %}
+   <input type="text" name="content" placeholder="댓글을 남겨보세요" class="comment_input"/>
+   <button type="submit" class="comment_button"><strong>작성하기</strong></button>
+</form>
+
+{% if article.comments.all.count != 0 %}
+<div class="comment_list">
+      {% for comment in article.comments.all %}
+      
+         <div class="comment_each">
+            <span class="comment_each_text">{{comment.content}}</span>
+            {% if user.is_authenticated and user.pk == comment.author.pk %}
+               <a href="{% url 'recomment' article.id comment.id%}" class="comment_buttons recomment_button"><strong>답글</strong></a>
+               <a href="{% url 'deleteComment' article.id comment.id%}"class="comment_buttons delete_button"><strong>삭제</strong></a>
+            {% else %}
+               <a href="{% url 'recomment' article.id comment.id%}" class="comment_buttons delete_button"><strong>답글</strong></a>
+            {% endif %}
+         </div>
+      {% endfor %}
+</div> 
+{% endif %}
+{% endblock %}

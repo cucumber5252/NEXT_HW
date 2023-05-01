@@ -1,0 +1,87 @@
+.create{
+    width: 93%;
+    height: auto;
+    box-shadow: 3px 3px 3px 3px slategray;
+    position: relative;
+    top: 0.8%;
+    margin-left: 1%;
+    border-radius: 3px;
+    padding: 3% 0 3% 5%;
+}
+
+.cre_title_text{
+    font-size: 1.2em;
+    margin-left: 0.5%;
+}
+
+.cre_title_input{
+    margin-top: 1.5%;
+    width: 93%;
+    border-radius: 5px;
+    padding: 1%;
+    border: 2px solid gray;
+}
+
+.cre_content_text{
+    font-size: 1.2em;
+    margin-left: 0.5%;
+}
+
+.cre_content_input{
+    margin-top: 1.5%;
+    width: 93%;
+    border-radius: 5px;
+    padding: 1%;
+    border: 2px solid gray;
+    font-size: 1.0em;
+}
+
+.cre_category_text{
+    font-size: 1.2em;
+    margin-left: 0.5%;
+}
+
+.category_radio{
+    margin: 2% 0;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    left: -8%;
+    margin-left: 3%;
+}
+
+.one_radio{
+    margin-left: 7%;
+}
+.span_each_radio{
+    margin-left: 0.3em;
+}
+
+.cre_button{
+    margin-left: 81%;
+    width: 15%;
+    border-radius: 5px;
+    border: 2px solid gray;
+    height: 2.5em;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    position: relative;
+}
+
+.cre_button_span{
+    position: absolute;
+    top: 30%;
+    left: 25%;
+}
+
+.post_icon{
+    width: 14px;
+    height: 14px;
+    
+    position: absolute;
+    top: 31%;
+    left: 67%;
+}

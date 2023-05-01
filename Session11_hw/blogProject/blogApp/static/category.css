@@ -1,0 +1,41 @@
+.cat_article_div{
+    margin-top: 0.5%;
+    margin-left: 1%;
+    width: 94%;
+    height: auto;
+    box-shadow: 3px 3px 3px 3px  gray;
+    border-radius: 5px;
+    padding: 2%;
+}
+
+.cat_article_a{
+    text-decoration: none;
+    position: relative;
+}
+
+.cat_title{
+    color: black;
+    margin-left: 0.5%;
+}
+
+.cat_date{
+    color: gray;
+    font-size: 0.7em;
+    margin-top: 0.7%;
+    margin-left: 0.5%;
+}
+
+.cat_content{
+    margin-top: 0.8%;
+    color: black;
+    margin-left: 0.5%;
+    font-size: 0.9em;
+}
+
+.cat_category{
+    position: absolute;
+    top: 0;
+    right: 1%;
+    color: gray;
+    font-size: 0.7em;
+}
