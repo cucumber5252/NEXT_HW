@@ -1,0 +1,81 @@
+.create{
+    width: 93.5%;
+    height: 84%;
+    box-shadow: 2px 2px 2px 2px slategray;
+    position: relative;
+    top: 0.8%;
+    margin-left: 1%;
+    border-radius: 3px;
+    padding: 3% 0 3% 5%;
+    background-color: #F1F6F9;
+}
+
+.cre_title_text{
+    font-size: 1.2em;
+    margin-left: 0.5%;
+}
+
+.cre_title_input{
+    margin-top: 1.5%;
+    width: 93%;
+    border-radius: 5px;
+    padding: 1%;
+    border: 2px solid #212A3E;
+}
+
+.cre_content_text{
+    font-size: 1.2em;
+    margin-left: 0.5%;
+}
+
+.cre_content_input{
+    margin-top: 1.5%;
+    width: 93%;
+    border-radius: 5px;
+    padding: 1%;
+    border: 2px solid #212A3E;
+    font-size: 1.0em;
+}
+
+.cre_cost_text{
+    font-size: 1.2em;
+    margin-left: 0.5%;
+}
+
+.cre_cost_input{
+    margin-top: 1.5%;
+    width: 93%;
+    border-radius: 5px;
+    padding: 1%;
+    border: 2px solid #212A3E;
+}
+
+.cre_button{
+    background-color: #F1F6F9;
+    margin-left: 81%;
+    width: 15%;
+    border-radius: 5px;
+    border: 2px solid #212A3E;
+    height: 2.5em;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    position: relative;
+}
+
+.cre_button_span{
+    position: absolute;
+    top: 30%;
+    left: 25%;
+}
+
+.post_icon{
+    width: 14px;
+    height: 14px;
+    
+    position: absolute;
+    top: 31%;
+    left: 67%;
+}

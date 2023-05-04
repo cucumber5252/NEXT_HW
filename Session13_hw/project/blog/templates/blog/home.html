@@ -1,0 +1,25 @@
+{% extends 'blog/base.html' %}
+
+
+{% block css %}
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'blog/home.css' %}">
+{% endblock %}
+
+
+{% block body %}
+
+    <div class="posts_archieve">
+    {% for post in posts %}
+    
+        <a href="{% url 'blog:detail' post.id %}" class="post">
+            <div class="htitle"><strong>{{post.title}}</strong></div>
+            <div class="hcost"><strong>{{post.cost}}원</strong></div>
+            <div class="hcontent">{{post.content}}</div>
+            <div class="hdate">{{post.date}}</div>
+            <div class="hauthor">{{post.author}}</div>
+        </a>
+    
+    {% endfor %}
+    </div>
+{% endblock %}

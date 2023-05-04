@@ -1,0 +1,164 @@
+.detail{
+    width: 93.5%;
+    height: 50%;
+    box-shadow: 2px 2px 2px 2px slategray;
+    position: relative;
+    top: 0.8%;
+    margin-left: 1%;
+    border-radius: 3px;
+    padding: 3% 0 3% 5%;
+    background-color: #F1F6F9;
+    position: relative;
+}
+
+.dtitle{
+    font-size: 1.8em;
+}
+
+.dcost{
+    font-size: 1.3em;
+    margin: 2% 0;
+}
+
+.dcontent{
+    font-size: 1.1em;
+}
+
+.ddate{
+    color: gray;
+    position: absolute;
+    top: 5%;
+    right: 5%;
+}
+
+.dauthor{
+    color: gray;
+    position: absolute;
+    bottom: 5%;
+    right: 5%;
+}
+
+.update_button_div{
+    width: 99.5%;
+    position: relative;
+}
+
+.update_update_button{
+    text-decoration: none;
+    color: black;
+    padding: 0.5% 2.5%;
+    border: 2px solid gray;
+    border-radius: 5px;
+    font-size: 0.8em;
+    margin-top: 1%;
+    box-shadow: 1px 1px 1px 1px slategray;
+
+    position: absolute;
+    right: 15%;
+}
+
+.update_delete_button{
+    text-decoration: none;
+    color: black;
+    padding: 0.5% 2.5%;
+    border: 2px solid gray;
+    border-radius: 5px;
+    font-size: 0.8em;
+    margin-top: 1%;
+    box-shadow: 1px 1px 1px 1px slategray;
+
+    position: absolute;
+    right: 0;
+}
+
+
+.update_button:hover{
+    text-decoration: underline;
+}
+
+
+
+.comment_form{
+    border: 2px  dashed slategray;
+    border-radius: 3px;
+    width: 98.5%;
+    margin-left: 0.7%;
+    position: relative;
+}
+
+.comment_input{
+    border: 2px  dashed slategray;
+    width: 87%;
+    height: auto;
+    background: none;
+    border: none;
+    padding: 1% 0;
+    margin-left: 2%;
+}
+
+.comment_input:focus{
+    outline:  none ;
+}
+
+
+.comment_button{
+    width: 12%;
+    color: black;
+    background: none;
+    position: absolute;
+    top: 15%;
+    right: 0;
+    border: none;
+}
+
+.comment_button:hover{
+    text-decoration: underline;
+}
+
+.comment_list{
+    margin-top: 3%;
+    border-radius: 3px;
+    border: 1px solid slategray;
+    box-shadow: 1px 1px 1px 1px slategray;
+    width: 98.5%;
+    margin-left: 0.7%;
+}
+
+.comment_each{
+    width: 99%;
+    height: 1.8em;
+    font-size: 0.9em;
+    position: relative;
+    
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0.5% 0 0.5% 0.3%;
+    border-bottom: 1px solid gray;
+    
+}
+
+.comment_each_text{
+    margin-left: 2%;
+}
+
+.comment_each_author{
+    margin-left: 2%;
+    color: gray;
+}
+
+
+.comment_buttons{
+    color: black;
+    text-decoration: none;
+    font-size: 0.9em;
+}
+
+.comment_buttons:hover{
+    text-decoration: underline;
+}
+
+.delete_button{
+    position: absolute;
+    right: 2%;
+}

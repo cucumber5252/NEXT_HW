@@ -1,0 +1,50 @@
+{% extends 'blog/base.html' %}
+
+
+{% block css %}
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'blog/detail.css' %}">
+{% endblock %}
+    
+
+{% block body %}
+    <div class="detail">
+        <div class="dtitle"><strong>{{post.title}}</strong></div>
+        <div class="dcost"><strong>{{post.cost}}원</strong></div>
+        <div class="dcontent">{{post.content}}</div>
+        <div class="ddate">{{post.date}}</div>
+        <div class="dauthor">by {{post.author}}</div>
+    </div>
+    <br>
+    {% if user.is_authenticated and user.pk == post.author.pk %}
+        <div class="update_button_div">
+            <a href="{% url 'blog:update' post.id %}" class="update_update_button"><strong>수정하기</strong></a>
+        </div>
+        <div class="update_button_div">
+            <a href="{% url 'blog:delete' post.id %}" class="update_delete_button"><strong>삭제하기</strong></a>
+        </div>
+        <br>
+    {% endif %}
+
+    <br>
+    <br>
+    <form method = "POST" class="comment_form">
+        {% csrf_token %}
+        <input type="text" name="content" placeholder="댓글을 남겨보세요" class="comment_input"/>
+        <button type="submit" class="comment_button"><strong>작성하기</strong></button>
+    </form>
+
+    {% if post.comments.all.count != 0 %}
+    <div class="comment_list">
+        {% for comment in post.comments.all %}
+            <div class="comment_each">
+                <span class="comment_each_text">{{comment.content}}</span>
+                <span class="comment_each_author">by {{comment.author}}</span>
+                {% if user.is_authenticated and user.pk == comment.author.pk %}
+                    <a href="{% url 'blog:deleteComment' post.id comment.id%}"class="comment_buttons delete_button"><strong>삭제</strong></a>
+                {% endif %}
+            </div>
+        {% endfor %}
+    </div> 
+    {% endif %}
+{% endblock %}

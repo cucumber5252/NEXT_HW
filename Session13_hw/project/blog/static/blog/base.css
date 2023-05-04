@@ -1,0 +1,173 @@
+body{
+    background-color:#f1f6f97a;
+}
+
+.home_link{
+    text-decoration: none;
+    color: #212A3E;
+}
+
+.home_link_title{
+    text-decoration: none;
+    color: #212A3E;
+    font-size: 1.2em;
+}
+
+.home_link:hover{
+    text-decoration: underline;
+}
+
+.body{
+    width: 70%;
+    margin: 0 15%;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    height: 36.5em;
+}
+
+.header{
+    width: 100%;
+    font-size: 1.2em;
+}
+
+.header_text{
+    width: 25%;
+    margin: 0.5% 0 0 75%;
+}
+
+.logout_button{
+    color: #212A3E;
+    text-decoration: none;
+}
+
+.logout_button:hover{
+    text-decoration: underline;
+}
+
+.title{
+    width: auto;
+    height: auto;
+    border-bottom: 2px solid #212A3E;
+}
+
+.title_text{
+    margin-left: 28%;
+    width: 50%;
+}
+
+
+.footer{
+    width: 100%;
+    border-top: 2px solid #212A3E;
+    height: 5%;
+    padding: 0.5% 0;
+}
+
+.info{
+    margin-left: 85%;
+}
+
+.info_margin{
+    margin-bottom: 0.1%;
+}
+
+.info_text{
+    margin: 0;
+}
+
+.c_circle{
+    position: relative;
+    top: 2px;
+}
+
+.profile{
+    border: #212A3E solid 2px;
+    border-radius: 5px;
+    width: 100px;
+    height: 100%;
+    text-align: center;
+    position: relative;
+    left: -2%
+}
+
+
+.profile_img{
+    
+    width: 90%;
+    height: 9em;
+    border-radius: 5px;
+    font-size: 0.7em;
+    margin: 5% ;
+}
+
+
+.profile_text_name{
+    margin: 10% 0 10% 0;
+}
+
+.profile_text_gray{
+    color: #9BA4B5;
+    font-size: 0.5em;
+    display: block;
+    width: 90%;
+    margin: 0 5% 8% 5%;
+    word-break: break-all;
+}
+
+
+.nav_bar{
+    margin-top: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    position: absolute;
+    top: 0;
+}
+
+
+.button{
+    text-decoration: none;
+    color: #212A3E;
+}
+
+.button_hover:hover{
+    text-decoration: underline;
+}
+
+
+.base_create_button{
+    border: 1.8px solid #212A3E;
+    border-radius: 5px;
+    padding: 3% 0;
+    width: 100px;
+    position: relative;
+    left: -2%;
+    font-size: 0.9em;
+    text-align: center;
+}
+
+
+.button_text{
+    margin-bottom: 1%;
+}
+
+.category_button{
+    margin-bottom: 1%;
+    margin-left: 15%;
+}
+
+.in_body{
+    width: 82%;
+    height: 93%;
+    position: absolute;
+    left: 18%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    margin-top: 2%;
+
+}
+
+.in_body::-webkit-scrollbar {
+    display: none;
+  }

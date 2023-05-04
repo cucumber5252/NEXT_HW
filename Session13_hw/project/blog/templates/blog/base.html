@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'blog/base.css' %}">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {% block css %}
+    {% endblock %}
+</head>
+
+
+<body>
+    
+    <div class="header">
+        <h6 class="header_text"><a href="{% url 'blog:home' %}" class="home_link">내 블로그</a> ㅣ 이웃 블로그 ㅣ 블로그 홈 ㅣ <a href="{% url 'accounts:logout' %}" class="logout_button">로그아웃</a></h6>
+    </div>
+
+    <div class="title">
+        <h1 class="title_text"><a href="{% url 'blog:home' %}" class="home_link_title"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="orange" class="bi bi-lightning-fill" viewBox="0 0 16 16">
+            <path d="M5.52.359A.5.5 0 0 1 6 0h4a.5.5 0 0 1 .474.658L8.694 6H12.5a.5.5 0 0 1 .395.807l-7 9a.5.5 0 0 1-.873-.454L6.823 9.5H3.5a.5.5 0 0 1-.48-.641l2.5-8.5z"/>
+          </svg>당근 번개 장터<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="orange" viewBox="0 0 16 16">
+            <path d="M5.52.359A.5.5 0 0 1 6 0h4a.5.5 0 0 1 .474.658L8.694 6H12.5a.5.5 0 0 1 .395.807l-7 9a.5.5 0 0 1-.873-.454L6.823 9.5H3.5a.5.5 0 0 1-.48-.641l2.5-8.5z"/>
+          </svg></a></h1>
+    </div>
+
+    <div class="body">
+        
+        <div class="nav_bar">
+            <div class="profile">
+                <div><img class="profile_img"></div>
+                <div class="profile_text">
+                    <div><h5 class="profile_text_name">{{user.profile.nickname}}</h5></div>
+                    <div><span class="profile_text_gray">{{user.username}}</span></div>
+                </div>
+            </div>
+            <br>
+            <a href="{% url 'blog:new' %}" class="base_create_button button button_hover"><strong>글쓰기</strong></a>
+            <div>
+            <a href="{% url 'blog:home' %}" class="button"><h5 class="button_text button_hover">전체 보기</h5></a>
+            </div>
+        </div>
+
+        <div class="in_body">
+
+
+            {% block body %}
+            {% endblock %}
+        </div>
+    </div>
+
+
+
+    <footer class="footer">
+    
+        <div class="info">
+            <div class="info_margin"><h6 class="info_text">전화: 010-4145-5820</h6></div>
+            <div class="info_margin"><h6 class="info_text">이메일: kdhyeok52@korea.ac.kr</h6></div>
+            <div class="copyright info_margin"><h6 class="info_text">Copyright <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" class="c_circle" viewBox="0 0 16 16">
+                <path d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8Zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM8.146 4.992c-1.212 0-1.927.92-1.927 2.502v1.06c0 1.571.703 2.462 1.927 2.462.979 0 1.641-.586 1.729-1.418h1.295v.093c-.1 1.448-1.354 2.467-3.03 2.467-2.091 0-3.269-1.336-3.269-3.603V7.482c0-2.261 1.201-3.638 3.27-3.638 1.681 0 2.935 1.054 3.029 2.572v.088H9.875c-.088-.879-.768-1.512-1.729-1.512Z"/>
+              </svg> Donghyuk Kang</h6></div>
+        </div>
+    </footer>
+</body>
+
+
+
+
+
+</html>

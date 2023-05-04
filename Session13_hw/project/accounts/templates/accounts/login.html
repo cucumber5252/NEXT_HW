@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'accounts/signup.css' %}" />
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+</head>
+<body>
+
+    <div class="posts_box">
+    
+    <form method="POST">
+    {% csrf_token %}
+        <br>
+        <h1 class="login_text">LOGIN</h1>
+        {% if error %}
+        <p class="error">{{error}}</p>
+        {% endif %}
+        <h2 class="registration-input-text">아이디</h2>
+        <input type="text" name="username" placeholder="아이디" class="registration-input"/>
+        <h2 class="registration-input-text">비밀번호</h2>
+        <input type="password" name="password" placeholder="비밀번호" class="registration-input"/>
+        <div class="registration-box">
+            <button class="button">로그인</button>
+        </div>
+    
+    </form>
+    
+
+        <div class="registration-box">
+            <h3>아직도 회원이 아니십니까?</h3>
+            <button class="button"><a href="{% url 'accounts:signup' %}" class='deco_none'>회원가입</a></button>
+        </div>
+    </div>
+
+</body>
+</html>

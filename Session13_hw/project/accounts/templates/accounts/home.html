@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'accounts/home.css' %}" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="profile_box_archieve">
+        <div class="profile_box_title"><h1>유저 목록</h1></div>
+
+        {% for profile in profiles %}
+        <div class = "profile_box_each"><strong>
+            <div class= "prealname">이름: {{profile.realname}}</div>
+            <div class= "pnickname">닉네임: {{profile.nickname}}</div>
+            <div class= "page">나이: {{profile.age}}</div></strong>
+        </div>
+        {% endfor %}
+        <br>
+    </div>
+    
+</body>
+</html>
