@@ -1,0 +1,134 @@
+{% extends 'base.html' %} {% block content %}
+<div>
+  <div>
+    <div class="post_title">{{ post.title }}</div>
+    <div class="post_content">{{ post.content }}</div>
+  </div>
+  <a href="{% url 'home' %}">홈으로</a>
+
+  {% if user.is_authenticated and post.author.pk == user.pk %}
+  <a href="{% url 'edit' post.pk %}">수정하기</a>
+  <a href="{% url 'delete' post.pk %}">삭제하기</a>
+  {% endif %} 
+  <span class="like-count">좋아요 {{ post.likes.count }}개</span>
+  
+  <ul class="comment-list">
+    {% for comment in post.comments.all %}
+    <li>{{ comment.content }}</li>
+      {% if user.is_authenticated and comment.author.pk == user.pk %}
+      <a href="{% url 'delete_comment' post.pk comment.pk %}">댓글삭제</a>
+      {% endif %}
+    {% endfor %}
+  </ul>
+
+  {% if user.is_authenticated %}
+  <div class="comment">
+    <input type="text" name="content" placeholder="댓글을 입력하세요" class="comment-input"/>
+    <button class="comment-button">댓글 쓰기</button>
+  </div>
+
+  <button class="like-button">좋아요</button>
+
+  {% endif %}
+  
+</div>
+
+
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script>
+  const likeButton = document.querySelector(".like-button");
+  const likeCount = document.querySelector(".like-count");
+  const likedPost = document.querySelector(".post_title");
+  const handleLike = () => {
+    fetch("/like", {
+      method: "POST",
+      body: JSON.stringify({
+        post_pk: "{{post.pk}}"
+      }),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    })
+
+      .then((response) => response.json())
+      .then((data) => {
+        likeCount.innerHTML = `좋아요 ${data.like_count}개`;
+        likedPost.classList.toggle('red_text');
+      });    
+
+  };
+
+  likeButton.addEventListener("click", handleLike);
+
+
+  const commentInput = document.querySelector('.comment-input');
+  const commentButton = document.querySelector('.comment-button');
+  const commentList = document.querySelector('.comment-list');
+
+  // const handleComment = () =>{
+  //   fetch("/comment", {
+  //     method: "POST",
+  //     body: JSON.stringify({
+  //       post_pk: "{{post.pk}}",
+  //       content: commentInput.value,
+  //     }),
+  //     headers: {
+  //       "Content-Type": "application/json",
+  //     },
+  //   })
+
+  //   .then((response) => response.json())
+  //   .then((data) => {
+  //     const newComment = document.createElement('li');
+
+  //     newComment.innerHTML = data.content;
+
+  //     if (data.author_pk == "{{ user.pk }}") {
+  //     const deleteLink = document.createElement('a');
+  //     deleteLink.href = `/delete_comment/${ data.post_pk }/${ data.comment_pk }`;
+  //     deleteLink.textContent = "댓글 삭제";
+  //     newComment.appendChild(deleteLink);
+  //   }
+
+  //     commentList.appendChild(newComment);
+  //     commentInput.value = '';
+
+  //   });
+
+  // };
+
+  const handleComment = async() =>{
+      try{
+        const response = await axios.post('/comment', {
+          post_pk: "{{post.pk}}", 
+          content: commentInput.value
+        });
+
+        const data = response.data;
+
+        const newComment = document.createElement('li');
+
+        newComment.innerHTML = data.content;
+
+        if (data.author_pk == "{{ user.pk }}") {
+          const deleteLink = document.createElement('a');
+          deleteLink.href = `/delete_comment/${ data.post_pk }/${ data.comment_pk }`;
+          deleteLink.textContent = "댓글 삭제";
+          newComment.append(deleteLink);
+        }
+
+        commentList.append(newComment);
+        commentInput.value = '';
+      }
+      catch (error){
+        console.error(error)
+      }
+    };
+
+  
+
+  commentButton.addEventListener('click', handleComment);
+</script>
+
+
+{% endblock content %}
